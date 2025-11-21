@@ -1,1 +1,505 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ফেসবুক পেজ স্ট্র্যাটেজি - ফাইনাল মিটিং মিনিটস</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Hind Siliguri font -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --crimson: #B31D31;
+            --linen: #E5E6DA;
+            --black: #000000;
+            --white: #FFFFFF;
+        }
 
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: var(--linen);
+            color: var(--black);
+        }
+        
+        .glass-card {
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(179, 29, 49, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: var(--crimson);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 280px;
+        }
+
+        /* Custom Scrollbar */
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: var(--linen);
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: var(--crimson);
+        }
+        
+        /* Header Background */
+        .header-bg {
+            background-color: var(--crimson);
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 23px;
+            top: 10px;
+            bottom: 0;
+            width: 2px;
+            background: #d1d5db; 
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            crimson: '#B31D31', 
+                            linen: '#E5E6DA',   
+                            black: '#000000',   
+                            white: '#FFFFFF',   
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="selection:bg-[#B31D31] selection:text-white">
+
+    <!-- Header Section -->
+    <header class="header-bg text-white pt-12 pb-24 px-4 relative overflow-hidden shadow-lg">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            
+            <!-- Logo Container -->
+            <div class="mx-auto mb-6 bg-white p-4 rounded-2xl shadow-lg inline-flex items-center justify-center" style="width: 180px;">
+                <img src="https://democraticbangladeshnetwork.com/wp-content/uploads/2025/11/gbn-logo-red-scaled.png" alt="GBN Logo" class="w-full h-auto object-contain">
+            </div>
+            
+            <!-- Tagline Badge -->
+            <div class="flex justify-center mb-4">
+                <span class="px-4 py-1 border border-white/30 bg-black/20 backdrop-blur-sm text-sm font-medium tracking-wide rounded shadow-sm">
+                    স্ট্র্যাটেজি ও কন্টেন্ট প্ল্যানিং সেশন
+                </span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="text-4xl md:text-6xl font-bold mb-2 leading-tight tracking-tight drop-shadow-sm">
+                ফেসবুক টিম মিটিং মিনিটস
+            </h1>
+            <p class="text-white/80 font-bold mb-4">মিটিং নম্বরঃ ১</p>
+
+            <!-- Date & Time -->
+            <p class="text-[#E5E6DA] text-lg md:text-xl font-medium opacity-90">
+                ২০ নভেম্বর, ২০২৫ | গুগল মিট | রাত ৯:০০টা (ইউরোপ সময়)
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 -mt-16 pb-20 relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6">
+
+        <!-- 1. Attendees -->
+        <div class="col-span-1 md:col-span-12 glass-card rounded-none border-l-4 border-brand-crimson p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+                <div class="bg-brand-linen p-3 rounded-none text-brand-black border border-black/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 00-5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl text-brand-black">উপস্থিত সদস্যবৃন্দ</h3>
+                    <p class="text-sm text-gray-600">মোট ৬ জন টিম মেম্বার উপস্থিত ছিলেন</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-2 justify-center md:justify-end">
+                <span class="px-3 py-1 bg-gray-100 text-brand-black text-sm font-medium border border-gray-200">অনুপম সৈকত শান্ত</span>
+                <span class="px-3 py-1 bg-gray-100 text-brand-black text-sm font-medium border border-gray-200">নাজমুল আহমেদ</span>
+                <span class="px-3 py-1 bg-gray-100 text-brand-black text-sm font-medium border border-gray-200">রাহাত মুস্তাফিজ</span>
+                <span class="px-3 py-1 bg-gray-100 text-brand-black text-sm font-medium border border-gray-200">নূর নবী দুলাল</span>
+                <span class="px-3 py-1 bg-gray-100 text-brand-black text-sm font-medium border border-gray-200">রেজাকুল চৌধুরী</span>
+                <span class="px-3 py-1 bg-gray-100 text-brand-black text-sm font-medium border border-gray-200">মো. মুশফিকুর রহমান</span>
+            </div>
+        </div>
+
+        <!-- 2. Category Rebranding -->
+        <div class="col-span-1 md:col-span-7 glass-card rounded-none p-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-brand-linen rounded-bl-full opacity-50"></div>
+            <h2 class="text-2xl font-bold text-brand-black mb-6 flex items-center gap-2">
+                <span class="text-brand-crimson">🏷️</span> ক্যাটাগরি পুনর্গঠন
+            </h2>
+            <div class="flex flex-col md:flex-row gap-4 items-center mb-6">
+                <div class="w-full md:w-1/3 bg-gray-50 border border-gray-200 p-4 text-center opacity-60 grayscale hover:grayscale-0 transition">
+                    <div class="text-xs font-bold text-gray-500 uppercase mb-1">আগের ক্যাটাগরি</div>
+                    <div class="font-bold text-gray-800 line-through text-lg">Social Service</div>
+                </div>
+                <div class="hidden md:block text-brand-crimson text-2xl">➔</div>
+                <div class="w-full md:w-2/3 bg-brand-linen border border-[#d1d2c9] p-5 shadow-sm">
+                    <div class="text-xs font-bold text-brand-black uppercase mb-3 text-center tracking-wider">নতুন মাল্টি-ক্যাটাগরি</div>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="bg-brand-white px-3 py-1.5 text-sm text-brand-crimson font-bold border-l-4 border-brand-crimson shadow-sm">Community Organization</span>
+                        <span class="bg-brand-white px-3 py-1.5 text-sm text-brand-crimson font-bold border-l-4 border-brand-crimson shadow-sm">Political Organization</span>
+                        <span class="bg-brand-white px-3 py-1.5 text-sm text-brand-crimson font-bold border-l-4 border-brand-crimson shadow-sm">Nonprofit Organization</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-4 border-l-4 border-brand-black">
+                <p class="text-sm text-brand-black leading-relaxed"><span class="font-bold">যৌক্তিকতা:</span> একাধিক ক্যাটাগরি ব্যবহারের ফলে পেজের দৃশ্যমানতা বাড়বে এবং সংগঠনের বহুমুখী কাজের সঠিক প্রতিফলন ঘটবে।</p>
+            </div>
+        </div>
+
+        <!-- 3. Visual Identity -->
+        <div class="col-span-1 md:col-span-5 glass-card rounded-none p-6">
+            <h2 class="text-2xl font-bold text-brand-black mb-6 flex items-center gap-2">
+                <span class="text-brand-crimson">🎨</span> ভিজ্যুয়াল আইডেন্টিটি
+            </h2>
+            <ul class="space-y-6">
+                <li class="flex items-start gap-4 group">
+                    <div class="bg-brand-linen p-2.5 text-brand-crimson mt-1 group-hover:bg-brand-crimson group-hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-black text-lg mb-1">প্রোফাইল পিকচার</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">প্রফেশনাল ও হাই-কোয়ালিটি ছবি ব্যবহার করে আপডেট করতে হবে।</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4 group">
+                    <div class="bg-brand-linen p-2.5 text-brand-crimson mt-1 group-hover:bg-brand-crimson group-hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-black text-lg mb-1">কভার ফটো ও ব্যানার</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">ফটোকার্ড ডিজাইনের সাথে সামঞ্জস্য রেখে ভিজ্যুয়াল কনসিস্টেন্সি নিশ্চিত করাতে হবে।</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 4. Peak Time Chart -->
+        <div class="col-span-1 md:col-span-8 glass-card rounded-none p-6 border-t-4 border-brand-black">
+            <div class="flex justify-between items-end mb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-brand-black flex items-center gap-2">
+                        <span class="text-brand-crimson">⏰</span> এনগেজমেন্টের সেরা সময়
+                    </h2>
+                    <p class="text-sm text-gray-500 mt-2">বিকেল ৪টা থেকে রাত ৯টা পর্যন্ত ইউজার অ্যাক্টিভিটি সর্বোচ্চ।</p>
+                </div>
+                <span class="bg-brand-crimson text-white text-xs font-bold px-3 py-1.5 uppercase tracking-wider">Peak: 4PM - 9PM</span>
+            </div>
+            <div class="chart-container">
+                <canvas id="peakTimeChart"></canvas>
+            </div>
+        </div>
+
+        <!-- 5. Team Responsibilities -->
+        <div class="col-span-1 md:col-span-4 bg-brand-black text-white rounded-none p-6 shadow-2xl flex flex-col justify-center">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
+                <span class="bg-brand-crimson p-1">👥</span> টিমের করণীয়
+            </h2>
+            <div class="space-y-4">
+                <div class="flex items-center gap-4 bg-white/5 p-4 border border-white/10 hover:bg-white/10 transition">
+                    <div class="text-2xl">⭐</div>
+                    <div class="text-sm font-light">পেজটিকে ব্যক্তিগত <br><span class="font-bold text-brand-linen">'Favorites'</span>-এ যোগ করা</div>
+                </div>
+                <div class="flex items-center gap-4 bg-white/5 p-4 border border-white/10 hover:bg-white/10 transition">
+                    <div class="text-2xl">💌</div>
+                    <div class="text-sm font-light">বন্ধু ও পরিচিতদের <br><span class="font-bold text-brand-linen">Follow Invite</span> পাঠানো</div>
+                </div>
+                <div class="flex items-center gap-4 bg-white/5 p-4 border border-white/10 hover:bg-white/10 transition">
+                    <div class="text-2xl">💬</div>
+                    <div class="text-sm font-light">নিয়মিত পোস্টে <br><span class="font-bold text-brand-linen">Like/Comment</span> করা</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Action Items Dashboard -->
+        <div class="col-span-1 md:col-span-12 space-y-6">
+            
+            <!-- Status Section with Responsibility -->
+            <div class="glass-card rounded-none p-6">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <!-- Donut Chart -->
+                    <div class="md:col-span-4 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-200 pb-6 md:pb-0 md:pr-6">
+                        <h3 class="text-lg font-bold text-brand-black mb-4 flex items-center uppercase tracking-wide">
+                            <span class="text-brand-crimson mr-2">■</span> কাজের অগ্রগতি (Status)
+                        </h3>
+                        <div style="height: 220px;">
+                            <canvas id="statusDonutChart"></canvas>
+                        </div>
+                    </div>
+                    <!-- Detailed List -->
+                    <div class="md:col-span-8 pl-0 md:pl-2">
+                        <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                            
+                            <!-- Completed -->
+                            <div class="bg-gray-100 p-4 border-l-4 border-brand-black">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-brand-black text-sm uppercase">Completed</span>
+                                    <span class="text-xs bg-black text-white px-2 py-0.5">১টি কাজ</span>
+                                </div>
+                                <ul class="list-none text-sm text-gray-700 space-y-2">
+                                    <li class="flex justify-between border-b border-gray-200 pb-1">
+                                        <span>পেজ ক্যাটাগরি ঠিক করা</span>
+                                        <span class="font-bold text-brand-crimson">দায়িত্ব: মুশফিক</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- In Progress -->
+                            <div class="bg-[#fff1f2] p-4 border-l-4 border-brand-crimson">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-brand-crimson text-sm uppercase">In Progress (চলছে)</span>
+                                    <span class="text-xs bg-brand-crimson text-white px-2 py-0.5">৩টি কাজ</span>
+                                </div>
+                                <ul class="list-none text-sm text-gray-800 space-y-2">
+                                    <li class="flex justify-between border-b border-red-100 pb-1">
+                                        <span>পেজকে 'Favorites'-এ রাখা</span>
+                                        <span class="font-bold text-black text-xs">দায়িত্ব: টিমের সবাই</span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-red-100 pb-1">
+                                        <span>ডেইলি ফটোকার্ড পোস্ট শুরু করা</span>
+                                        <span class="font-bold text-black text-xs">দায়িত্ব: মুশফিক, রাহাত, শান্ত</span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-red-100 pb-1">
+                                        <span>ট্রেন্ডিং টপিক মনিটর করা</span>
+                                        <span class="font-bold text-black text-xs">দায়িত্ব: টিমের সবাই</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Pending -->
+                            <div class="bg-brand-linen p-4 border-l-4 border-gray-400">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-gray-700 text-sm uppercase">Pending (বাকি আছে)</span>
+                                    <span class="text-xs bg-gray-500 text-white px-2 py-0.5">৪টি কাজ</span>
+                                </div>
+                                <ul class="list-none text-sm text-gray-700 space-y-2">
+                                    <li class="flex justify-between border-b border-gray-300 pb-1">
+                                        <span>প্রোফাইল ও কভার ফটো আপডেট</span>
+                                        <span class="font-bold text-black text-xs">দায়িত্ব: মুশফিক, রাহাত, শান্ত</span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-gray-300 pb-1">
+                                        <span>ফটোকার্ড স্টাইলে ব্যানার ডিজাইন</span>
+                                        <span class="font-bold text-black text-xs">দায়িত্ব: মুশফিক</span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-gray-300 pb-1">
+                                        <span>এডিটোরিয়াল গাইডলাইন রিভিউ</span>
+                                        <span class="font-bold text-black text-xs">দায়িত্ব: রাহাত ও শান্ত</span>
+                                    </li>
+                                    <li class="flex justify-between border-b border-gray-300 pb-1">
+                                        <span>পোস্টিং শিডিউল মেইনটেইন</span>
+                                        <span class="font-bold text-black text-xs">দায়িত্ব: মুশফিক</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Additional Guidelines / Pro Tips -->
+        <div class="col-span-1 md:col-span-12 bg-brand-linen border border-brand-crimson p-6 rounded-none relative">
+             <h2 class="text-xl font-bold text-brand-crimson mb-4 flex items-center gap-2">
+                <span>📌</span> সোশ্যাল মিডিয়া ও কন্টেন্ট টিপস (বিবিধ)
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-4 shadow-sm">
+                    <h4 class="font-bold text-black mb-2 text-sm uppercase">আর্টিকেল ও ফটোকার্ড</h4>
+                    <p class="text-sm text-gray-700">সোশ্যাল মিডিয়া বা পত্রিকায় কোনও লেখার চুম্বক অংশ পেলে লেখকের নাম ও সূত্রসহ <span class="font-bold">মুশফিক, রাহাত, শান্ত, নাজমুল বা তন্ময়</span>-এর কাছে দিন। ডিজাইনার মুশফিক এটি দিয়ে ফটোকার্ড বানাবেন।</p>
+                </div>
+                <div class="bg-white p-4 shadow-sm">
+                    <h4 class="font-bold text-black mb-2 text-sm uppercase">গ্রুপ শেয়ারিং</h4>
+                    <p class="text-sm text-gray-700">কোনও লেখা গুরুত্বপূর্ন মনে করলে লেখকের অনুমতি সাপেক্ষে আমাদের গ্রুপে কপি-পেস্ট করে শেয়ার করতে পারেন।</p>
+                </div>
+                <div class="bg-white p-4 shadow-sm">
+                    <h4 class="font-bold text-black mb-2 text-sm uppercase">এনগেজমেন্ট বৃদ্ধি</h4>
+                    <p class="text-sm text-gray-700">কোনও আলোচিত বিষয়ে তর্ক-বিতর্কগুলি গ্রুপের কমেন্টে নিয়ে যেতে পারলে ফেইসবুক গ্রুপের রিচ বাড়বে।</p>
+                </div>
+                <div class="bg-white p-4 shadow-sm">
+                    <h4 class="font-bold text-black mb-2 text-sm uppercase">ভবিষ্যৎ পরিকল্পনা</h4>
+                    <p class="text-sm text-gray-700">ফটোকার্ডের জন্য একটি <span class="font-bold">কন্টেন্ট পলিসি ও কন্টেন্ট ব্যাংক</span> তৈরি করা হবে। পরবর্তী মিটিং-এ এটি নিয়ে কাজ করা হবে।</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. Timeline -->
+        <div class="col-span-1 md:col-span-12 glass-card rounded-none p-8 relative">
+            <h2 class="text-2xl font-bold text-brand-black mb-8 uppercase tracking-wide">পরবর্তী পদক্ষেপ</h2>
+            <div class="relative pl-8 border-l-2 border-brand-black ml-3">
+                
+                <div class="mb-10 relative">
+                    <div class="absolute -left-[43px] top-1 w-6 h-6 bg-brand-crimson border-4 border-white shadow-md"></div>
+                    <h3 class="font-bold text-xl text-brand-crimson mb-2">তাৎক্ষণিক (২৪ ঘণ্টা)</h3>
+                    <div class="bg-brand-linen/50 p-4 border border-gray-200">
+                        <ul class="text-sm text-brand-black list-disc list-inside font-medium">
+                            <li>সবাই পেজকে 'Favorites'-এ অ্যাড করুন</li>
+                            <li>পরিচিতদের পেজ ফলো করার ইনভাইট পাঠান</li>
+                            <li>পেজের পোস্টে রিয়েক্ট/কমেন্ট শুরু করুন</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-10 relative">
+                    <div class="absolute -left-[43px] top-1 w-6 h-6 bg-brand-black border-4 border-white shadow-md"></div>
+                    <h3 class="font-bold text-brand-black mb-2">এই সপ্তাহে</h3>
+                    <div class="bg-gray-50 p-4 border border-gray-200">
+                        <ul class="text-sm text-brand-black list-disc list-inside">
+                            <li>প্রোফাইল ও কভার ফটো চেঞ্জ করে ফেলতে হবে</li>
+                            <li>এডিটোরিয়াল গাইডলাইন ঠিকঠাক করে ফেলতে হবে</li>
+                            <li>গুরুত্বপূর্ণ কাজের দায়িত্ব বুঝিয়ে দিতে হবে</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[43px] top-1 w-6 h-6 bg-gray-400 border-4 border-white shadow-md"></div>
+                    <h3 class="font-bold text-gray-600 mb-2">চলমান (Ongoing)</h3>
+                    <div class="bg-white p-4 border border-gray-200">
+                        <ul class="text-sm text-brand-black list-disc list-inside">
+                            <li>ডেইলি ফটোকার্ড পোস্টিং</li>
+                            <li>পোস্টের রিচ/এনগেজমেন্ট চেক করা</li>
+                            <li>ট্রেন্ডিং টপিকের দিকে নজর রাখা</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-brand-black text-brand-linen py-10 mt-8 border-t-8 border-brand-crimson">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-2xl font-bold mb-4">গণতান্ত্রিক বাংলাদেশ নেটওয়ার্ক</p>
+            <div class="max-w-3xl mx-auto mb-6 border-t border-b border-gray-700 py-4">
+                <p class="text-sm leading-relaxed font-light italic text-gray-300">
+                    “সাম্য, মানবিক মর্যাদা ও সামাজিক ন্যায়বিচার” -এর পূর্ণ বাস্তবায়ন এবং “বৈষম্যহীন, অসাম্প্রদায়িক ও অন্তর্ভূক্তিমূলক গণতান্ত্রিক বাংলাদেশ নির্মাণ” এর লক্ষ্যকে সামনে রেখে ক্রিয়াশীল পৃথিবীর বিভিন্ন দেশে বসবাসরত বাংলাদেশীদের প্লাটফর্ম।
+                </p>
+            </div>
+            <p class="text-sm opacity-80">নোট প্রস্তুতের তারিখ: ২১ নভেম্বর, ২০২৫</p>
+        </div>
+    </footer>
+
+    <script>
+        Chart.defaults.font.family = "'Hind Siliguri', sans-serif";
+        Chart.defaults.color = '#000000';
+
+        const tooltipCallback = {
+            plugins: {
+                tooltip: {
+                    backgroundColor: '#000000',
+                    padding: 12,
+                    titleFont: { size: 13, weight: 'bold' },
+                    bodyFont: { size: 12 },
+                    cornerRadius: 0,
+                    displayColors: false,
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(label) ? label.join(' ') : label;
+                        }
+                    }
+                },
+                legend: { display: false }
+            }
+        };
+
+        // 1. Status Donut
+        new Chart(document.getElementById('statusDonutChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Pending', 'In Progress', 'Completed'],
+                datasets: [{
+                    data: [4, 3, 1],
+                    backgroundColor: [
+                        '#9ca3af', // Gray for Pending 
+                        '#B31D31', // Crimson for In Progress 
+                        '#000000'  // Black for Completed 
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: { 
+                        position: 'bottom', 
+                        labels: { usePointStyle: true, padding: 20, font: { size: 12, weight: 600 } } 
+                    },
+                    tooltip: tooltipCallback.plugins.tooltip
+                }
+            }
+        });
+
+        // 3. Peak Time Area
+        const peakCtx = document.getElementById('peakTimeChart').getContext('2d');
+        const gradient = peakCtx.createLinearGradient(0, 0, 0, 300);
+        gradient.addColorStop(0, 'rgba(179, 29, 49, 0.3)'); // Crimson with opacity
+        gradient.addColorStop(1, 'rgba(179, 29, 49, 0.0)');
+
+        new Chart(peakCtx, {
+            type: 'line',
+            data: {
+                labels: ['12am', '4am', '8am', '12pm', '4pm', '8pm', '11pm'],
+                datasets: [{
+                    data: [10, 5, 25, 50, 95, 90, 60],
+                    borderColor: '#B31D31', // Crimson Line
+                    backgroundColor: gradient,
+                    borderWidth: 3,
+                    tension: 0.3,
+                    fill: true,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#B31D31',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { display: false },
+                    x: { 
+                        grid: { display: false }, 
+                        ticks: { font: { size: 11, weight: 'bold' }, color: '#000000' } 
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        ...tooltipCallback.plugins.tooltip,
+                        mode: 'index',
+                        intersect: false
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
